@@ -114,7 +114,7 @@ def get_passwd(i_app_name, key):
     matches = []
     for enc_data in results:
         plain_data = decrypt_all(enc_data, key)
-        if i_app_name == plain_data[0]:
+        if i_app_name.lower() == plain_data[0].lower():
             matches.append(plain_data)
     return matches
 
